@@ -10,5 +10,15 @@ class AttendanceBloc extends Bloc<AttendanceEvent, AttendanceState> {
     on<LunchOutPressed>((event, emit) {
       emit(state.copyWith(status: AttendanceStatus.lunchOutCompleted));
     });
+
+    on<LunchInPressed>((event, emit) {
+      emit(state.copyWith(status: AttendanceStatus.lunchInCompleted));
+    });
+
+    on<OfficeOutPressed>((event, emit) {
+      emit(state.copyWith(status: AttendanceStatus.officeOutCompleted));
+    });
+
+
   }
 }
