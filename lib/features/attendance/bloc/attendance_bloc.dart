@@ -19,6 +19,9 @@ class AttendanceBloc extends Bloc<AttendanceEvent, AttendanceState> {
       emit(state.copyWith(status: AttendanceStatus.officeOutCompleted));
     });
 
+    on<ResetAttendancePressed>((event, emit) {
+      emit(state.copyWith(status: AttendanceStatus.initial));
+    });
 
   }
 }
