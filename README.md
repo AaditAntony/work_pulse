@@ -17,3 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 woking on attendence system
 chose the state bloc
+currently working on the home page
