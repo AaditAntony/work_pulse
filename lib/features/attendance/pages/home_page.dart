@@ -11,19 +11,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('WorkPulse'),
-      ),
+      appBar: AppBar(title: const Text('WorkPulse')),
 
       body: BlocBuilder<AttendanceBloc, AttendanceState>(
         builder: (context, state) {
-
           return Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-
                 const SizedBox(height: 30),
 
                 Text(
@@ -50,49 +46,63 @@ class HomePage extends StatelessWidget {
 
                 const SizedBox(height: 40),
 
-                ElevatedButton(
-                  onPressed: () {
-                    context.read<AttendanceBloc>().add(
-                      OfficeInPressed(),
-                    );
-                  },
-                  child: const Text('Office IN'),
-                ),
+                if (state.status == AttendanceStatus.initial)
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<AttendanceBloc>().add(LunchOutPressed());
+                    },
+                    child: const Text('Lunch OUT'),
+                  ),
 
                 const SizedBox(height: 15),
 
-                ElevatedButton(
-                  onPressed: () {
-                    context.read<AttendanceBloc>().add(
-                      LunchOutPressed(),
-                    );
-                  },
-                  child: const Text('Lunch OUT'),
-                ),
+                if (state.status == AttendanceStatus.officeInCompleted)
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<AttendanceBloc>().add(LunchOutPressed());
+                    },
+                    child: const Text('Lunch OUT'),
+                  ),
 
                 const SizedBox(height: 15),
 
-                ElevatedButton(
-                  onPressed: () {
-                    context.read<AttendanceBloc>().add(
-                      LunchInPressed(),
-                    );
-                  },
-                  child: const Text('Lunch IN'),
-                ),
+                if (state.status == AttendanceStatus.lunchOutCompleted)
+                  ElevatedButton(
+                    onPressed: () {
+                      context.read<AttendanceBloc>().add(LunchInPressed());
+                    },
+                    child: Text(""),
+                  ),
 
                 const SizedBox(height: 15),
 
+              if(state.status==AttendanceStatus.lunchInCompleted)
                 ElevatedButton(
                   onPressed: () {
-                    context.read<AttendanceBloc>().add(
-                      OfficeOutPressed(),
-                    );
+                    context.read<AttendanceBloc>().add(OfficeOutPressed());
                   },
                   child: const Text('Office OUT'),
                 ),
 
                 const SizedBox(height: 15),
+
+                if(state.status==AttendanceStatus.officeOutCompleted)
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.green.shade100,
+                    ),
+                    child: const Text(
+                      'Attendance Completed Successfully',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+
 
                 ElevatedButton(
                   onPressed: () {
