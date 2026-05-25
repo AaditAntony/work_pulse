@@ -25,4 +25,6 @@ done the correction in the home page set
 done the punch model
 started the attendance status
 done the code of the attendance status
+moving to attendance bloc
+
 
