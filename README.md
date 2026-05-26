@@ -34,7 +34,7 @@ flutter hive installed
 flutter hive generator installed
 buildrunner installed
 installation done
-going to modifi=y punch model
+going to modifiy punch model
 started to mody punch model
 new punch model dart file is create using the punch model
 done doing the punch model
