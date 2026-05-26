@@ -41,3 +41,4 @@ done doing the punch model
 going to modfiy main for hive
 started modifying main for hive
 done mofiying main for the hive
+started the modify of the attendance bloc with hive
