@@ -33,4 +33,5 @@ started the hive instllation
 flutter hive installed
 flutter hive generator installed
 buildrunner installed
+installation done
 
