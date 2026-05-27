@@ -6,12 +6,46 @@ import 'attendance_event.dart';
 import 'attendance_state.dart';
 
 class AttendanceBloc extends Bloc<AttendanceEvent, AttendanceState> {
+  static AttendanceStatus _restoreStatus(
+      List<PunchModel> punches,
+      ) {
+
+    if (punches.isEmpty) {
+      return AttendanceStatus.initial;
+    }
+
+    final lastPunch = punches.last.title;
+
+    switch (lastPunch) {
+
+      case 'Office IN':
+        return AttendanceStatus.officeInCompleted;
+
+      case 'Lunch OUT':
+        return AttendanceStatus.lunchOutCompleted;
+
+      case 'Lunch IN':
+        return AttendanceStatus.lunchInCompleted;
+
+      case 'Office OUT':
+        return AttendanceStatus.officeOutCompleted;
+
+      default:
+        return AttendanceStatus.initial;
+    }
+  }
   AttendanceBloc()
       : super(
     AttendanceState(
       punches: Hive.box<PunchModel>('attendanceBox')
           .values
           .toList(),
+
+      status: _restoreStatus(
+        Hive.box<PunchModel>('attendanceBox')
+            .values
+            .toList(),
+      ),
     ),
   ) {
     on<OfficeInPressed>((event, emit) {
