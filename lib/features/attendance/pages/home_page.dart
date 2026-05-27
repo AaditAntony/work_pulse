@@ -49,9 +49,11 @@ class HomePage extends StatelessWidget {
                 if (state.status == AttendanceStatus.initial)
                   ElevatedButton(
                     onPressed: () {
-                      context.read<AttendanceBloc>().add(LunchOutPressed());
+                      context.read<AttendanceBloc>().add(
+                        OfficeInPressed(),
+                      );
                     },
-                    child: const Text('Lunch OUT'),
+                    child: const Text('Office IN'),
                   ),
 
                 const SizedBox(height: 15),
