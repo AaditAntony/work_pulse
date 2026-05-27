@@ -6,7 +6,14 @@ import 'attendance_event.dart';
 import 'attendance_state.dart';
 
 class AttendanceBloc extends Bloc<AttendanceEvent, AttendanceState> {
-  AttendanceBloc() : super(const AttendanceState()) {
+  AttendanceBloc()
+      : super(
+    AttendanceState(
+      punches: Hive.box<PunchModel>('attendanceBox')
+          .values
+          .toList(),
+    ),
+  ) {
     on<OfficeInPressed>((event, emit) {
       if (state.status == AttendanceStatus.initial) {
         final updatedPunches = List<PunchModel>.from(state.punches)
