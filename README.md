@@ -47,3 +47,4 @@ start the attendance bloc
 done the attendance bloc
 started the attendance bloc
 currently doing the attendance bloc
+done the attendance bloc
