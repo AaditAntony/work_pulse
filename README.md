@@ -60,3 +60,4 @@ started the correction in the attendance bloc
 work in the attendance bloc where the attendance is reseted in the bloc
 finsished the attendance bloc code
 create the navigation section in the features
+create the history page
