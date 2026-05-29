@@ -57,3 +57,4 @@ finished the home code
 in home the error of the button is fixed
 the home page is done   
 started the correction in the attendance bloc
+work in the attendance bloc where the attendance is reseted in the bloc
