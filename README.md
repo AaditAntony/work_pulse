@@ -54,3 +54,4 @@ done the constructor code
 need to modify the home code
 started working on the home code
 finished the home code
+in home the error of the button is fixed
