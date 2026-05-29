@@ -105,7 +105,12 @@ class AttendanceBloc extends Bloc<AttendanceEvent, AttendanceState> {
     });
 
     on<ResetAttendancePressed>((event, emit) {
-      emit(const AttendanceState());
+
+      Hive.box<PunchModel>('attendanceBox').clear();
+
+      emit(
+        const AttendanceState(),
+      );
     });
   }
 }
