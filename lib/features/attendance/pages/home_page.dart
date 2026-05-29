@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       context.read<AttendanceBloc>().add(LunchInPressed());
                     },
-                    child: Text(""),
+                    child: Text("Lunch IN"),
                   ),
 
                 const SizedBox(height: 15),
