@@ -5,6 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'features/attendance/bloc/attendance_bloc.dart';
 import 'features/attendance/models/punch_model.dart';
 import 'features/attendance/pages/home_page.dart';
+import 'features/attendance/pages/main_navigation_page.dart';
 
 void main() async {
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       create: (_) => AttendanceBloc(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const HomePage(),
+        home: const MainNavigationPage(),
       ),
     );
   }
