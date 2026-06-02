@@ -73,3 +73,4 @@ currently doing the settings page
 done the settings page.
 created the main update page 4
 started the updating main
+done the updaing the main whre the the home page is now main  navigaiton
