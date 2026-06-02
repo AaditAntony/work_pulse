@@ -69,4 +69,5 @@ currently doing the main navigation code
 done the main navigation code
 created the settings branch
 started working the settings page.
+currently doing the settings page
 
