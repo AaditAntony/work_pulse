@@ -19,26 +19,22 @@ class HistoryPage extends StatelessWidget {
           if (state.punches.isEmpty) {
             return const Center(
               child: Text(
-                'No attendance records yet',
+                'No attendance records found',
               ),
             );
           }
 
           return ListView.builder(
-            padding: const EdgeInsets.all(16),
             itemCount: state.punches.length,
             itemBuilder: (context, index) {
 
               final punch = state.punches[index];
 
-              return Card(
-                margin: const EdgeInsets.only(bottom: 12),
-                child: ListTile(
-                  leading: const Icon(Icons.access_time),
-                  title: Text(punch.title),
-                  subtitle: Text(
-                    punch.time.toString(),
-                  ),
+              return ListTile(
+                leading: const Icon(Icons.access_time),
+                title: Text(punch.title),
+                subtitle: Text(
+                  punch.time.toString(),
                 ),
               );
             },
