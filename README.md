@@ -88,3 +88,4 @@ started the dong the model code
 currently doing the code.
 done the code.
 created the branch called the setting_event
+started doing the code on the setting event
