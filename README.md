@@ -95,3 +95,4 @@ created the branch called the setting_state
 started doing the code in the setting state
 currently doing the code in the setting state
 done the code in the setting state
+created the branch called the settings_bloc
