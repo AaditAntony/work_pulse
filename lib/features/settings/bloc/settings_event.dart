@@ -28,3 +28,4 @@ class ReminderIntervalChanged extends SettingsEvent {
 class SoundToggled extends SettingsEvent {}
 
 class VibrationToggled extends SettingsEvent {}
+//ok
