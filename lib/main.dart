@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'core/services/notification_service.dart';
 import 'features/attendance/bloc/attendance_bloc.dart';
 import 'features/attendance/models/punch_model.dart';
 import 'features/attendance/pages/home_page.dart';
@@ -17,6 +18,8 @@ void main() async {
   Hive.registerAdapter(PunchModelAdapter());
 
   await Hive.openBox<PunchModel>('attendanceBox');
+
+  await NotificationService.instance.initialize();
 
   runApp(const MyApp());
 }

@@ -47,4 +47,28 @@ class NotificationService {
         AndroidFlutterLocalNotificationsPlugin>()
         ?.requestNotificationsPermission();
   }
+  Future<void> showInstantNotification({
+    required int id,
+    required String title,
+    required String body,
+  }) async {
+    const androidDetails = AndroidNotificationDetails(
+      'attendance_channel',
+      'Attendance Reminders',
+      channelDescription: 'Reminder notifications for attendance punches',
+      importance: Importance.max,
+      priority: Priority.high,
+    );
+
+    const details = NotificationDetails(
+      android: androidDetails,
+    );
+
+    await _notifications.show(
+      id: id,
+      title: title,
+      body: body,
+      notificationDetails: details,
+    );
+  }
 }
