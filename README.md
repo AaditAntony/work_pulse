@@ -109,3 +109,4 @@ the directory is added of the notification service
 the directory is added the code of the noticaiton service
 the main page is added with the notification
 the trial notification is done
+the code of the trial is added below the reset button in the ui
