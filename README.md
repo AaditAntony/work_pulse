@@ -107,3 +107,4 @@ the branch is pushed
 create a new branch 
 the directory is added of the notification service
 the directory is added the code of the noticaiton service
+the main page is added with the notification
