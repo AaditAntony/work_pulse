@@ -101,3 +101,4 @@ currently doing the setting
 done the settings bloc
 created a branch
 currently done the main page
+done the premission the manifest.xml
