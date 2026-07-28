@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/services/notification_service.dart';
 import '../bloc/attendance_bloc.dart';
 import '../bloc/attendance_event.dart';
 import '../bloc/attendance_state.dart';
@@ -113,6 +114,16 @@ class HomePage extends StatelessWidget {
                     );
                   },
                   child: const Text('Reset'),
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    await NotificationService.instance.showInstantNotification(
+                        id: 1,
+                        title: 'WorkPulse',
+                        body: 'Dont forget to punch OUT for lunch!',
+                    );
+                  },
+                  child: const Text('Test Notification'),
                 ),
               ],
             ),
