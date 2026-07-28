@@ -99,3 +99,4 @@ created the branch called the settings_bloc
 started doing the code in the settings_bloc
 currently doing the setting
 done the settings bloc
+currently done the main page
