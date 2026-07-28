@@ -104,5 +104,6 @@ currently done the main page
 done the premission the manifest.xml
 done the notification permission
 the branch is pushed
+create a new branch 
 the directory is added of the notification service
 the directory is added the code of the noticaiton service
