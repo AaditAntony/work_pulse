@@ -111,3 +111,4 @@ the main page is added with the notification
 the trial notification is done
 the code of the trial is added below the reset button in the ui
 I have tested it and the code is a success
+the code has been pushed 
