@@ -6,6 +6,7 @@ import 'features/attendance/bloc/attendance_bloc.dart';
 import 'features/attendance/models/punch_model.dart';
 import 'features/attendance/pages/home_page.dart';
 import 'features/attendance/pages/main_navigation_page.dart';
+import 'features/settings/bloc/settings_bloc.dart';
 
 void main() async {
 
@@ -25,8 +26,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => AttendanceBloc(),
+    return MultiBlocProvider(
+      providers: [
+
+        BlocProvider(
+          create: (_) => AttendanceBloc(),
+        ),
+
+        BlocProvider(
+          create: (_) => SettingsBloc(),
+        ),
+
+      ],
+
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: const MainNavigationPage(),
