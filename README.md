@@ -105,3 +105,4 @@ done the premission the manifest.xml
 done the notification permission
 the branch is pushed
 the directory is added of the notification service
+the directory is added the code of the noticaiton service
