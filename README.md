@@ -103,3 +103,4 @@ created a branch
 currently done the main page
 done the premission the manifest.xml
 done the notification permission
+the branch is pushed
